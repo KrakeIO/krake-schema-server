@@ -5,9 +5,6 @@ request       = require 'request'
 describe "schema_server", ->
   beforeEach (done)->
     @schema_server = schema_server.app.listen 10004
-    @schema_client = new SchemaClient
-      host: "localhost"
-      port: 10004
     done()
 
   afterEach (done)->
